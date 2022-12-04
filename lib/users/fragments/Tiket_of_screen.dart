@@ -90,7 +90,7 @@ class Tiket extends StatelessWidget {
                 itemBuilder: (contex, index) {
                   Transaksi eachClothItemRecord = dataSnapShot.data![index];
                   double total_pembayaran = eachClothItemRecord.trans_total!;
-                  double refund = (total_pembayaran * 85 / 100);
+                  double refund = (total_pembayaran * 50 / 100);
                   double saldoNasabah = eachClothItemRecord.saldo!;
                   double totalKembali = saldoNasabah + refund;
 

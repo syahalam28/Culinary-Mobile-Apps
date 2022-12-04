@@ -130,6 +130,7 @@ class _BookingSummaryState extends State<BookingSummary> {
   }
 
   var formKey = GlobalKey<FormState>();
+  DateTime _dateTime = DateTime.now();
   @override
   void initState() {
     dateinput.text = "";
@@ -352,7 +353,7 @@ class _BookingSummaryState extends State<BookingSummary> {
                             ),
                           ),
                           Container(
-                            // height: 250,
+                            height: 250,
                             // width: MediaQuery.of(Get.context!).size.width,
                             margin: EdgeInsets.only(left: 20, right: 20),
                             decoration: BoxDecoration(
@@ -424,10 +425,7 @@ class _BookingSummaryState extends State<BookingSummary> {
                                       top: 13, left: 10, right: 20),
                                   child: Align(
                                       alignment: Alignment.center,
-                                      child: TextFormField(
-                                        validator: (val) => val == ""
-                                            ? "Please Input Time"
-                                            : null,
+                                      child: TextField(
                                         controller:
                                             timeinput, //editing controller of this TextField
                                         decoration: const InputDecoration(

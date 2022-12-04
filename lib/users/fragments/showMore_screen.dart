@@ -212,7 +212,7 @@ class _ListRestaurantState extends State<ListRestaurant> {
                           setState(() {});
                         },
                         icon: Padding(
-                          padding: const EdgeInsets.only(top: 20, left: 25),
+                          padding: const EdgeInsets.only(top: 20, left: 0),
                           child: const Icon(
                             Icons.close,
                             color: Color.fromRGBO(118, 17, 28, 1),
@@ -253,8 +253,8 @@ class _ListRestaurantState extends State<ListRestaurant> {
         }
         if (dataSnapShot.data!.length > 0) {
           return SizedBox(
-            height: MediaQuery.of(Get.context!).size.height,
-            // height: 1000,
+            height: 4500,
+            // height: MediaQuery.of(Get.context!).size.height,
             child: ListView.builder(
               itemCount: dataSnapShot.data!.length,
               physics: const NeverScrollableScrollPhysics(),

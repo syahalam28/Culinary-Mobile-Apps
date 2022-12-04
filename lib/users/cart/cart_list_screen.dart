@@ -442,9 +442,25 @@ class _CartListScreenState extends State<CartListScreen> {
                 );
               },
             )
-          : const Center(
-              child: Text("Cart Is Empty"),
-            )),
+          : Container(
+              margin: EdgeInsets.only(top: 160),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    child: Image.asset('images/octo.png'),
+                  ),
+                  Text(
+                    "No Data, Let's Order With OMO RR",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(''),
+                ],
+              ))),
       bottomNavigationBar: GetBuilder(
         init: CartListController(),
         builder: (c) {

@@ -155,7 +155,7 @@ class HistoryScreen extends StatelessWidget {
               itemBuilder: (contex, index) {
                 History eachClothItemRecord = dataSnapShot.data![index];
                 double total_pembayaran = eachClothItemRecord.trans_total!;
-                double refund = (total_pembayaran * 85 / 100);
+                double refund = (total_pembayaran * 50 / 100);
                 double saldoNasabah = eachClothItemRecord.saldo!;
                 double totalKembali = saldoNasabah + refund;
 
@@ -322,7 +322,7 @@ class HistoryScreen extends StatelessWidget {
                                                   title: const Text(
                                                       "Are You Sure To Refund"),
                                                   content: const Text(
-                                                      "Get Cashback 85%"),
+                                                      "Get Cashback 50%"),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () {
